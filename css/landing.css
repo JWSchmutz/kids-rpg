@@ -1,0 +1,119 @@
+#landing {
+  background: url(../images/landing-bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.title {
+  font-size: 6rem;
+  padding: 50px 60px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: url(../images/sign.jpg);
+  background-size: 100% 100%;
+  color: goldenrod;
+  border: goldenrod 4px solid;
+  border-top: none;
+  border-radius: 6px;
+  width: fit-content;
+  margin: auto;
+}
+
+#landing-prompts {
+  background-color: rgb(68, 2, 68, 0.85);
+  width: fit-content;
+  margin: auto;
+  color: rgb(206, 206, 206);
+  padding: 40px 60px;
+  margin-top: 100px;
+}
+
+#landing-prompts p {
+  text-align: center;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#landing-prompts p:hover {
+  color: white;
+  filter: drop-shadow(4px 4px 5px gray);
+  transition: 0.2s;
+}
+
+#landing-prompts > div > p {
+  margin-bottom: 30px;
+}
+
+#new-game-players,
+#new-game-difficulty,
+#new-game-characters,
+#continue-options,
+#character-name-div,
+#world,
+#new-game-name {
+  display: none;
+}
+
+#new-game-characters {
+  margin-bottom: 20px;
+}
+
+#new-game-characters h4 {
+  color: white;
+  font-size: 3rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#character-options,
+#character-name-div {
+  text-align: center;
+}
+
+#character-name-div {
+  padding-top: 20px;
+}
+
+#character-name-div label,
+#new-game-name label {
+  font-size: 25px;
+  color: white;
+}
+
+#character-options img {
+  margin-top: 20px;
+  height: 25vh;
+}
+
+#character-name,
+#game-name {
+  height: 30px;
+  font-size: 24px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#character-submit-btn,
+#game-submit-btn {
+  font-size: 20px;
+  color: goldenrod;
+  background-color: rgb(68, 2, 68);
+  border-radius: 10px;
+  border: goldenrod 3px solid;
+  filter: drop-shadow(4px 4px 5px black);
+
+  padding: 10px;
+  cursor: pointer;
+}
+
+#character-submit-btn:hover,
+#game-submit-btn:hover {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
