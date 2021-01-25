@@ -23,7 +23,7 @@
 }
 
 #landing-prompts {
-  background-color: rgb(68, 2, 68, 0.85);
+  background-color: rgba(70, 7, 28, 0.9);
   width: fit-content;
   margin: auto;
   color: rgb(206, 206, 206);
@@ -50,7 +50,7 @@
 #new-game-players,
 #new-game-difficulty,
 #new-game-characters,
-#continue-options,
+#continue-game-options,
 #character-name-div,
 #world,
 #new-game-name {
@@ -61,11 +61,16 @@
   margin-bottom: 20px;
 }
 
-#new-game-characters h4 {
+#new-game-characters h4,
+#continue-game-options h4 {
   color: white;
   font-size: 3rem;
   text-decoration: underline;
   text-align: center;
+}
+
+#continue-game-options h4 {
+  margin-bottom: 20px;
 }
 
 #character-options,
@@ -103,7 +108,7 @@
 #game-submit-btn {
   font-size: 20px;
   color: goldenrod;
-  background-color: rgb(68, 2, 68);
+  background-color: rgb(70, 7, 28);
   border-radius: 10px;
   border: goldenrod 3px solid;
   filter: drop-shadow(4px 4px 5px black);

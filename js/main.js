@@ -1,10 +1,12 @@
 // -------------------------   Landing Page    -------------------------
-const currentGame = {
+let currentGame = {
   players: {},
   gameName: "",
 };
 let playerChoosingCharacter = 1;
+
 let charactersAvailable = ["robot", "ninja", "ninja2", "knight"];
+
 const newGameClick = () => {
   document.getElementById("new-or-continue").style.display = "none";
   document.getElementById("new-game-name").style.display = "block";
@@ -70,10 +72,48 @@ const prepForNextCharacterChoice = (chosenCharacter) => {
   document.getElementById("character-name-div").style.display = "none";
 };
 
+const continueGameClick = () => {
+  document.getElementById("new-or-continue").style.display = "none";
+  const continueGameOptions = document.getElementById("continue-game-options");
+  continueGameOptions.style.display = "block";
+  // localStorage.getItem;
+  getAllStoredGames().forEach((game) => {
+    const currentGame = document.createElement("p");
+    currentGame.setAttribute("id", game.split("=")[0]);
+    currentGame.setAttribute(
+      "onclick",
+      `selectGameToContinue("${game.split("=")[0]}")`
+    );
+    currentGame.textContent = game.substring(9).split("=")[0];
+    continueGameOptions.appendChild(currentGame);
+  });
+};
+
+const selectGameToContinue = (gameName) => {
+  alert(gameName);
+  let gameToLoad = localStorage.getItem(gameName);
+  currentGame = JSON.parse(gameToLoad);
+  console.log(currentGame);
+};
+
 const goToWorld = () => {
   document.getElementById("landing").style.display = "none";
   document.getElementById("world").style.display = "block";
-  localStorage.setItem(currentGame.gameName, JSON.stringify(currentGame));
+  localStorage.setItem(
+    "kids-rpg-" + currentGame.gameName,
+    JSON.stringify(currentGame)
+  );
 };
+function getAllStoredGames() {
+  var storedGames = [],
+    keys = Object.keys(localStorage),
+    key;
+  for (i = 0; (key = keys[i]); i++) {
+    if (key.substring(0, 9) == "kids-rpg-")
+      storedGames.push(key + "=" + localStorage.getItem(key));
+  }
+
+  return storedGames;
+}
 
 // -------------------------   World    -------------------------

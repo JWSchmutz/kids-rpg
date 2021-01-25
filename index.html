@@ -16,7 +16,7 @@
         <div id="landing-prompts">
             <div id="new-or-continue">
                 <p onclick="newGameClick()">New Game</p>
-                <p>Continue Game</p>
+                <p onclick="continueGameClick()">Continue Game</p>
             </div>
             <div id="new-game-name">
                 <form onsubmit="newGameNameSubmit(event)">
@@ -55,7 +55,9 @@
                     </form>
                 </div>
             </div>
-            <div id="continue-options">Continue</div>
+            <div id="continue-game-options">
+                <h4>Choose your game</h4>
+            </div>
         </div>
     </div>
     <div id="world">World</div>
