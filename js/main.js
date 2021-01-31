@@ -104,8 +104,9 @@ const goToWorld = () => {
     JSON.stringify(currentGame)
   );
 };
+
 function getAllStoredGames() {
-  var storedGames = [],
+  let storedGames = [],
     keys = Object.keys(localStorage),
     key;
   for (i = 0; (key = keys[i]); i++) {
@@ -117,3 +118,16 @@ function getAllStoredGames() {
 }
 
 // -------------------------   World    -------------------------
+
+// let character = document.querySelector('.ninja2');
+// let map = document.querySelector('.map')
+
+// let x = 0;
+// let y = 0;
+// let held_directions = [] // state of which arrow keys are held down
+
+// let speed = 1;
+
+// const placeCharacter = () => {
+
+// }
